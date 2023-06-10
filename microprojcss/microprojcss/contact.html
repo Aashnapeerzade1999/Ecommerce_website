@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylelesheet" href="style.css">
+</head>
+<body>
+
+    <section id="header"> 
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+    
+        <div>
+            <ul id="navbar">
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+      </section>
+
+    <div class="container">
+    <form onsubmit="sendEmail(): reset(); return false;">
+        <h3> Get The new updates By Getting In Touch With Us</h3>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email id" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <textarea id="message" rows="4" placeholder="How can we help you"></textarea>
+        <button type="submit">Send</button>
+    </form>
+    </div>
+
+    <footer>  
+        <div class="footer0">  
+          <h1>Fiyara</h1>  
+        </div>  
+        <div class="footer1 ">  
+          Connect with us at<div class="social-media">  
+            <a href="#">  
+              <ion-icon name="logo-facebook"></ion-icon>  
+            </a>  
+            <a href="#">  
+              <ion-icon name="logo-linkedin"></ion-icon>  
+            </a>  
+            <a href="#">  
+              <ion-icon name="logo-youtube"></ion-icon>  
+            </a>  
+            <a href="#">  
+              <ion-icon name="logo-instagram"></ion-icon>  
+            </a>  
+            <a href="#">  
+              <ion-icon name="logo-twitter"></ion-icon>  
+            </a>  
+          </div>  
+        </div>  
+        <div class="footer2">  
+          <div class="product">  
+            <div class="heading">Products</div>  
+            <div class="div">Sell your Products</div>  
+            <div class="div">Advertise</div>  
+            <div class="div">Pricing</div>  
+            <div class="div">Product Buisness</div>  
+          </div>  
+          <div class="services">  
+            <div class="heading">Services</div>  
+            <div class="div">Return</div>  
+            <div class="div">Cash Back</div>  
+            <div class="div">Affiliate Marketing</div>  
+            <div class="div">Others</div>  
+          </div>  
+          <div class="Company">  
+            <div class="heading">Company</div>  
+            <div class="div">Complaint</div>  
+            <div class="div">Careers</div>  
+            <div class="div">Affiliate Marketing</div>  
+            <div class="div">Support</div>  
+          </div>  
+          <div class="Get Help">  
+            <div class="heading">Get Help</div>  
+            <div class="div">Help Center</div>  
+            <div class="div">Privacy Policy</div>  
+            <div class="div">Terms</div>  
+            <div class="div">Login</div>  
+          </div>  
+        </div>  
+        <div class="footer3">Copyright © <h4>Fiyara</h4> 2021-2028</div>  
+      </footer>
+</body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "vohraalif03@gmail.com",
+                Password : "A30501384",
+                To : 'Fiara03052005@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "contact form ",
+                Body : "name: " +document.getElementById("name").value
+                + " <br> Email:" + document.getElementById("Email").value
+                + " <br> Email:" + document.getElementById("phone").value
+                + " <br> Email:" + document.getElementById("message").value
+            }).then(
+            message => alert(message)
+        );
+    }
+</script>
+<style>
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(148, 182, 148);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   form{
+        background-color: rgb(103, 133, 123);
+        display: flex;
+        flex-direction: column;
+        padding: 2vw 4vw;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 10px;
+    }
+    form h3{
+        color: rgb(214, 255, 236);
+        font-weight: 10s00;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    form input, textarea{
+        border: 0;
+        margin: 10px 0;
+        padding: 20px;
+        outline: none;
+        background-color: #222b27;
+        color: aliceblue;
+        font-size: 16px;
+    }
+    form button{
+        padding: 15px;
+        background: #222b27;
+        color:#555;
+        font-size: 18px;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        width: 150px;
+        margin: 20px auto 0;
+        border-radius: 10px;
+    }
+    #header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: rgb(103, 133, 123);
+    box-shadow: 0 5px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+/*footer*/
+footer{  
+    display:flex;  
+    flex-direction: column;  
+      background-color: #25312c;  
+       align-items: center;  
+       color:white;  
+      }  
+    .footer1{  
+       display:flex;  
+     flex-direction: column;  
+     align-items: center;  
+     color:white;  
+     margin-top:15px;  
+      }  
+     .social-media{  
+      display:flex;  
+        justify-content: center;  
+       color:white;  
+       flex-wrap: wrap;  
+      }  
+     .social-media a{  
+       color:white;  
+        margin:20px;  
+       border-radius: 5px;  
+       margin-top:10px;  
+       color:white;  
+      }  
+      .social-media a ion-icon{  
+       color:white;  
+      background-color: #222b27;  
+      }  
+      .social-media a:hover ion-icon{  
+        color:red;  
+        transform: translateY(5px);  
+      }  
+      .footer2{  
+        display: flex;  
+        width:100%;  
+        justify-content:space-evenly;  
+        align-items: center;  
+        text-decoration: none;  
+        flex-wrap: wrap;  
+      }  
+      .footer0{  
+        font-weight:1200;  
+        transition-duration: 1s;  
+      } 
+      .footer0 h1{
+        color: #088178;
+      } 
+     .footer0:hover{  
+        color:rgb(243, 168, 7);  
+      }  
+      .footer2 .heading {  
+        font-weight: 900;  
+        font-size: 18px;  
+      }  
+      .footer3 {  
+        margin-top:60px;  
+        margin-bottom: 20px;  
+        display:flex;  
+        flex-wrap: wrap;  
+        justify-content: center;  
+      }  
+      .footer2 .heading:hover{  
+        color:rgb(243, 168, 7) ;  
+      }  
+      .footer2 .div:hover{  
+      transform: scale(1.05);  
+      }  
+      .footer3 h4{  
+        margin:0 10px;  
+      }  
+      .footer2 div{  
+        margin:10px;  
+      }  
+</style>
+</html>
